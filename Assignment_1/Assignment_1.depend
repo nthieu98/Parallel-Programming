@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1569396408 source:/media/hieu/Work/Studying/Subjects/ParallelPrograming/Assignment_1/MatrixMulRow.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<omp.h>
+

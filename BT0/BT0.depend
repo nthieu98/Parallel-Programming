@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1568215865 source:/media/hieu/Work/Studying/Subjects/LTSS/BT0/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1568217104 source:/media/hieu/Work/Studying/Subjects/LTSS/BT0/MatrixMul.c
+	<stdio.h>
+	<stdlib.h>
+
+1568221309 source:/media/hieu/Work/Studying/Subjects/LTSS/BT0/openMP.c
+	<omp.h>
+	<stdio.h>
+
