@@ -30,18 +30,31 @@ int main()
       B[i][j] = 1;
     }
   }
-  int numSegRow = m / numThr + ((m % numThr) ? 1 : 0);
-  int numSegCol = p / numThr + ((p % numThr) ? 1 : 0);
+  int segRow = m / numThr + ((m % numThr) ? 1 : 0);
+  int segCol = p / numThr + ((p % numThr) ? 1 : 0);
+  printf("segRow: %d\n", segRow);
+  printf("segCol: %d\n", segCol);
+  int numSegRow = ceil(1.0 * m / segRow);
+  int numSegCol = ceil(1.0 * p / segCol);
+  printf("numSegRow: %d\n", numSegRow);
+  printf("numSegCol: %d\n", numSegCol);
+  int numCell = numSegRow * numSegCol;
+  printf("Num Cell: %d\n", numCell);
   int id;
   omp_set_num_threads(numThr);
   #pragma omp parallel private(id)
   {
     id = omp_get_thread_num();
     //printf("%d", id);
-    for(int i = id * numSegRow; i < m && i < (id + 1) * numSegRow; i++){
-      for(int j = id * numSegCol; j < p && j < (id + 1) * numSegCol; j++){
-        for(int k = 0; k < n; k++){
-          C[i][j] += A[i][k] * B[k][j];
+    for(int cell = id; cell < numCell; cell += numThr) {
+      int row = cell / numSegCol;
+      int col = cell - row * numSegCol;
+      //printf("row col: %d %d\n", row * segRow, col * segCol);
+      for(int i = row * segRow; i < (row + 1) * segRow && i < m; i ++) {
+        for(int j = col * segCol; j < (col + 1) * segCol && j < p; j ++) {
+          for(int k = 0; k < n; k ++) {
+            C[i][j] = C[i][j] + A[i][k] * B[k][j];
+          }
         }
       }
     }

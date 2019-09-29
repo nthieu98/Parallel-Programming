@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1569400303 source:/media/hieu/Work/Studying/Subjects/ParallelPrograming/ClassExcer2/main.c
+	<stdio.h>
+	<stdlib.h>
+	<omp.h>
+
