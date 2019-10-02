@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Assignment_1" />
+		<Option title="viberString" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Assignment_1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/viberString" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Assignment_1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/viberString" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -31,23 +31,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="MatrixMulCell.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="MatrixMulCol.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="MatrixMulMod.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="MatrixMulRow.c">
+		<Unit filename="viberString.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
