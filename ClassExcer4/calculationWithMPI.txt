@@ -1,0 +1,5 @@
+1. Input at one process (usual rank = 0)
+2. Devide caculation region
+3. Devide Input and send data to each process
+4. Caculation + transfer data between process
+5. Reunion Output 

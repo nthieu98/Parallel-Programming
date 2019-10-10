@@ -1,0 +1,4 @@
+BT1MPI.c
+Init A[100], B[100] at rank = 0
+Calculation C = A + B on P processes (100 % P == 0)
+Reunion back rank 0 and print
