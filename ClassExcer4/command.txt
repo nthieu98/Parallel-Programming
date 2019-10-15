@@ -1,2 +1,2 @@
-mpcc file.c
+mpicc file.c
 mpirun -np 10 runfile
