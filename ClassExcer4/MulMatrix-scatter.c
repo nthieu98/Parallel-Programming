@@ -30,7 +30,7 @@ int main(int argc, char **argv)
         }
     }
     int *Aa = (int *) malloc(seg * n * sizeof(int));
-    int *Bb = (int *) malloc(n * p * sizeof(int));
+    // int *Bb = (int *) malloc(n * p * sizeof(int));
     int *Cc = (int *) malloc(seg * p * sizeof(int));
     MPI_Scatter(A, seg * n, MPI_INT, Aa, seg * n, MPI_INT, 0, MPI_COMM_WORLD); 
     MPI_Bcast(B, n * p, MPI_INT, 0, MPI_COMM_WORLD);
