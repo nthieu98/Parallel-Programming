@@ -20,12 +20,12 @@ int main(int argc, char **argv)
     if(rank == 0) { 
         for(int i = 0; i < m; i++) {
             for(int j = 0; j < n; j++) {
-                A[i * n + j] = 1;
+                A[i * n + j] = i;
             }
         }
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < p; j++) {
-                B[i * p + j] = 1;
+                B[i * p + j] = i;
             }
         }
     }
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
         for(int j = 0; j < p; j++) {
             Cc[i * p + j] = 0;
             for(int k = 0; k < n; k++){
-                Cc[i * p + j] += Aa[i * n + k] * Bb[k * p + j];
+                Cc[i * p + j] += Aa[i * n + k] * B[k * p + j];
             }
             // printf("%d ", Aa[i * n + j]);
         }
