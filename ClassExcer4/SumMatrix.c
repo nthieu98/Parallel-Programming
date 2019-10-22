@@ -32,7 +32,7 @@ int main(int argc, char **argv)
             }
         }
         // printf("%d\n", **(A + seg * n));
-        for(int i = 1; i < size; i++) {    
+        for(int i = 1; i < size; i++) {
             for(int j = 0; j < seg; j++) {
                 MPI_Send(A[i * seg + j], n, MPI_INT, i, 0, MPI_COMM_WORLD);
                 MPI_Send(B[i * seg + j], n, MPI_INT, i, 1, MPI_COMM_WORLD);
